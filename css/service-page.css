@@ -1,0 +1,326 @@
+/* ===================================
+   SERVICE PAGE STYLES - service-page.css
+   For website-design.html and mobile-app.html
+   =================================== */
+
+:root {
+    --cream: #fffcf5;
+    --navy: #1a1a3e;
+}
+
+/* ===================================
+   HERO SECTION (Service Pages)
+   =================================== */
+
+.hero-service {
+    background: linear-gradient(135deg, var(--cream) 0%, #fff 100%);
+    padding: 100px 0 80px;
+}
+
+.hero-service h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.hero-mockup {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* ===================================
+   CHECKMARK LISTS
+   =================================== */
+
+.checkmark-list {
+    list-style: none;
+    padding: 0;
+}
+
+.checkmark-list li {
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    font-size: 1.05rem;
+}
+
+.checkmark-list li::before {
+    content: "✓";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: var(--navy);
+    color: white;
+    border-radius: 50%;
+    margin-right: 15px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.checkmark-list-service {
+    list-style: none;
+    padding: 0;
+}
+
+.checkmark-list-service li {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* ===================================
+   SERVICE DETAIL CARDS
+   =================================== */
+
+.service-detail-card {
+    border-radius: 15px;
+    border: 1px solid #e0e0e0 !important;
+    transition: all 0.3s ease;
+}
+
+.service-detail-card:hover {
+    border-color: #111 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transform: translateY(-5px);
+}
+
+.service-detail-card h5 {
+    letter-spacing: -0.5px;
+    margin-bottom: 15px;
+}
+
+.service-detail-card p {
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* ===================================
+   FEATURE CARDS
+   =================================== */
+
+.feature-card {
+    background: var(--cream);
+    padding: 40px;
+    border-radius: 16px;
+    height: 100%;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+}
+
+/* ===================================
+   PROCESS SECTION (Navy Background)
+   =================================== */
+
+.bg-navy {
+    background-color: #050a30 !important;
+}
+
+.process-section {
+    background: var(--navy);
+    color: white;
+    padding: 80px 0;
+}
+
+.process-timeline {
+    position: relative;
+    padding: 40px 0;
+}
+
+.process-step {
+    margin-bottom: 60px;
+    position: relative;
+}
+
+/* Process Numbers */
+.process-number {
+    width: 60px;
+    height: 60px;
+    background: #ffc107;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #050a30;
+}
+
+.step-number {
+    width: 70px;
+    height: 70px;
+    background: #ffc107;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 20px;
+}
+
+/* Process Icons */
+.process-icon,
+.step-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+/* 5-Column Layout for Process Steps */
+.col-lg-2-4 {
+    flex: 0 0 auto;
+    width: 20%;
+}
+
+/* ===================================
+   TEAM SECTION (Service Pages)
+   =================================== */
+
+/* Old Style - With Overlay (for website-design.html inline cards) */
+.team-card {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 1;
+}
+
+.team-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+    color: white;
+    padding: 20px;
+}
+
+/* New Style - Colored Backgrounds (for mobile-app.html) */
+.team-card-service {
+    text-align: center;
+}
+
+.team-img-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    height: 350px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.team-img-wrapper-service {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.team-img-wrapper img,
+.team-img-wrapper-service img {
+    max-height: 100%;
+    width: auto;
+}
+
+/* Team Background Colors */
+.bg-rose { background-color: #d1a3a4; }
+.bg-teal { background-color: #a5cad2; }
+.bg-brown { background-color: #c48c74; }
+.bg-purple { background-color: #bca0dc; }
+.bg-pink { background-color: #f2a2bb; }
+.bg-green { background-color: #93b874; }
+
+/* Gradient Backgrounds */
+.bg-gradient-1 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important; }
+.bg-gradient-2 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important; }
+.bg-gradient-3 { background: linear-gradient(135deg, #fddb92 0%, #d1fdff 100%) !important; }
+.bg-gradient-4 { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%) !important; }
+.bg-gradient-5 { background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%) !important; }
+.bg-gradient-6 { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%) !important; }
+
+/* ===================================
+   STATS SECTION
+   =================================== */
+
+.stat-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 4px solid #2ecc71;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2ecc71;
+    margin-bottom: 5px;
+}
+
+/* ===================================
+   DISCOVERY BOX
+   =================================== */
+
+.discovery-box {
+    border: 1px solid #e5e5e5;
+}
+
+.discovery-box a.text-decoration-none {
+    color: #000;
+    transition: 0.3s;
+}
+
+.discovery-box a.text-decoration-none:hover {
+    color: #555;
+    padding-left: 5px;
+}
+
+/* ===================================
+   HELP CARDS (Mobile App Page)
+   =================================== */
+
+.help-card {
+    transition: transform 0.3s ease;
+}
+
+.help-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ===================================
+   RESPONSIVE - MOBILE
+   =================================== */
+
+@media (max-width: 991px) {
+    .col-lg-2-4 {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-service h1 {
+        font-size: 2rem;
+    }
+    
+    .process-number,
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .col-lg-2-4 {
+        width: 100%;
+    }
+}

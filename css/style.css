@@ -1,0 +1,279 @@
+/* ===================================
+   MAIN SITE STYLES - style.css
+   For index.html and global elements
+   =================================== */
+
+:root {
+    --cream: #fffcf5;
+}
+
+/* ===================================
+   GLOBAL STYLES
+   =================================== */
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #111;
+    overflow-x: hidden;
+}
+
+.fw-extrabold { 
+    font-weight: 800; 
+}
+
+.bg-cream { 
+    background-color: var(--cream); 
+}
+
+.bg-black {
+    background-color: #000 !important;
+}
+
+.border-secondary {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ===================================
+   NAVBAR
+   =================================== */
+
+.navbar-brand img {
+    max-height: 100px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: rotate(-5deg) scale(1.1);
+}
+
+.navbar-brand span {
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+/* ===================================
+   HERO SECTION (Index Page)
+   =================================== */
+
+.hero-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.hero-text-column { 
+    padding: 4% 6%; 
+}
+
+.hero-title { 
+    font-size: clamp(2.5rem, 5vw, 4.5rem); 
+    font-weight: 800; 
+    line-height: 1.1; 
+    letter-spacing: -2px; 
+    margin-bottom: 1.5rem;
+}
+
+.hero-lead {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    margin-bottom: 2rem;
+}
+
+.text-gradient { 
+    background: linear-gradient(90deg, #2ecc71, #3498db, #9b59b6); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+
+/* Updated Video Wrapper - Smaller & Better Fitted */
+.hero-video-wrapper {
+    position: relative;
+    max-width: 750px;
+    margin: 0 auto;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    border-radius: 30px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.hero-video-wrapper video { 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ===================================
+   CLIENT LOGOS
+   =================================== */
+
+.grayscale { 
+    filter: grayscale(100%); 
+    opacity: 0.5; 
+    transition: 0.3s; 
+    max-height: 50px; 
+    width: auto !important; 
+    margin: 0 auto; 
+}
+
+.grayscale:hover { 
+    filter: grayscale(0%); 
+    opacity: 1; 
+}
+
+/* ===================================
+   SERVICE CARDS (Index Page)
+   =================================== */
+
+.service-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.service-card:hover { 
+    border-color: #111; 
+    transform: translateY(-10px); 
+}
+
+/* ===================================
+   TEAM SECTION (Index Page)
+   =================================== */
+
+.team-img { 
+    width: 100%; 
+    aspect-ratio: 1/1; 
+    object-fit: cover; 
+    border-radius: 20px; 
+}
+
+/* ===================================
+   FAQ SECTION
+   =================================== */
+
+.custom-faq .accordion-button {
+    padding: 1.5rem;
+    background-color: #fff;
+    margin-bottom: 15px;
+    border-radius: 12px !important;
+    border: 1px solid #eee;
+}
+
+.custom-faq .accordion-button:not(.collapsed) { 
+    color: #000; 
+    box-shadow: none; 
+    border-color: #ffc107; 
+}
+
+.custom-faq .accordion-button::after { 
+    background-size: contain; 
+    width: 1.5rem; 
+    height: 1.5rem; 
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: #2ecc71 !important;
+    padding-left: 5px;
+}
+
+/* ===================================
+   CONTACT MODAL
+   =================================== */
+
+.custom-input {
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 0 !important;
+    color: white !important;
+    padding: 1rem 0 !important;
+    box-shadow: none !important;
+}
+
+.custom-input:focus {
+    border-bottom-color: #2ecc71 !important;
+}
+
+.custom-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.form-select.custom-input option {
+    background-color: #111;
+    color: white;
+}
+
+/* Modal Animation */
+.modal.fade .modal-dialog {
+    transform: translateY(100%);
+    transition: transform 0.4s ease-out;
+}
+
+.modal.show .modal-dialog {
+    transform: translateY(0);
+}
+
+/* ===================================
+   RESPONSIVE - MOBILE
+   =================================== */
+
+@media (max-width: 991px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .hero-video-wrapper { 
+        border-radius: 20px;
+        max-width: 100%;
+        margin-top: 40px;
+    }
+    
+    .navbar-brand img {
+        max-height: 50px;
+    }
+    
+    .navbar-brand span {
+        font-size: 1.25rem;
+    }
+    
+    .hero-text-column { 
+        text-align: center;
+        padding: 4%;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 40px 0;
+    }
+
+    .hero-video-wrapper {
+        border-radius: 15px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+}
